@@ -10,7 +10,7 @@ import { getRoomsRoute } from "./http/routes/get-roms.ts";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 app.register(fastifyCors, {
-  origin: "http://localhost:3000/",
+  origin: "*",
 });
 
 app.setSerializerCompiler(serializerCompiler);
